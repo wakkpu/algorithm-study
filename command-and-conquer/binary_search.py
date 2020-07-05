@@ -27,9 +27,8 @@ def binary_search(A, left, right, k):
 if __name__ == "__main__":
 
     A = [1, 2, 3, 0, 5, 6, 8, 9, 4, 7]
-
     # binary search works iff list to input is sorted
     A = sorted(A)
 
-    print(binary_search(A, 0, len(A), 8))
+    print(binary_search(A, 0, len(A), 3))
     print(binary_search(A, 0, len(A), -1))
