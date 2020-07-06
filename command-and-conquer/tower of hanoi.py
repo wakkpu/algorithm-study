@@ -1,3 +1,5 @@
+# https://www.acmicpc.net/problem/11729
+
 def Hanoi(N, start, to, via):
 
     if N == 1:
