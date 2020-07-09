@@ -1,6 +1,5 @@
 # https://www.acmicpc.net/problem/1074
 
-#
 result = 0
 
 def Z(N, r, c):
@@ -32,13 +31,7 @@ def Z(N, r, c):
     else: # recursive cases
         if (c < x_m and r < y_m):  # sector 1
 
-            if(c < 2 and r < 2):
-                Z(N - 1, r, c)
-            elif(c < 2):
-                Z(N - 1, r//2, c)
-            elif(r < 2):
-                Z(N - 1, r, c//2)
-            else:
+
                 Z(N - 1, r//2, c//2)
 
         if (c >= x_m and r < y_m):  # sector 2
