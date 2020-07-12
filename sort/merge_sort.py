@@ -1,23 +1,23 @@
 def merge(left, right):
 
-    result = []
+    result = [] # sorted list
 
-    while len(left) > 0 or len(right) > 0:
-        if len(left) > 0 and len(right) > 0:
+    while len(left) > 0 or len(right) > 0: # until left or right is empty
+        if len(left) > 0 and len(right) > 0: # if left and right is not empty
 
-            if left[0] <= right[0]:
+            if left[0] <= right[0]: # append smaller one into result
                 result.append(left[0])
                 left = left[1: ]
 
-            else:
+            else:                   # append smaller one into result
                 result.append(right[0])
                 right = right[1: ]
 
-        elif len(left) > 0:
+        elif len(left) > 0: # if right is empty
             result.append(left[0])
             left = left[1: ]
 
-        elif len(right) > 0:
+        elif len(right) > 0: # if left is empty
             result.append(right[0])
             right = right[1: ]
 
@@ -30,10 +30,10 @@ def merge_sort(A):
 
     else:
         mid = len(A) // 2
-        left  = merge_sort(A[ :mid])
-        right = merge_sort(A[mid: ])
+        left  = merge_sort(A[ :mid]) # split
+        right = merge_sort(A[mid: ]) # split
 
-        return merge(left, right)
+        return merge(left, right) # merge
 
 
 
