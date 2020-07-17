@@ -19,11 +19,11 @@ def heap_sort(unsorted):
 
     n = len(unsorted)
 
-    # building max heap
+    # building max heap. step 1
     for i in range(n//2 - 1, -1, -1):
         heapify(unsorted, i, n)
 
-    # redirection
+    # redirection. step 2~4
     for i in range(n-1, 0, -1):
         unsorted[0], unsorted[i] = unsorted[i], unsorted[0]
         heapify(unsorted, 0, i)
