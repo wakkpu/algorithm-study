@@ -4,9 +4,9 @@ def ATM_problem(A, X):
     P = X
     P = sorted(P)
 
-    prefix_time = [0]*len(P)
+    prefix_time = [0]*A
 
-    for i in range(len(P)):
+    for i in range(A):
         for j in range(0, i+1):
             prefix_time[i] += P[j]
 
