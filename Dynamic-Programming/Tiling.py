@@ -1,8 +1,6 @@
 import sys
 sys.setrecursionlimit(10**6)
-
-N = int(input())
-T = [0] * N
+global T
 
 
 def Tile(n):
@@ -16,4 +14,9 @@ def Tile(n):
     return T[n-1]
 
 
-print(Tile(N) % 10007)
+if __name__ == "__main__":
+
+    N = int(input())
+    T = [0] * N
+
+    print(Tile(N) % 10007)
