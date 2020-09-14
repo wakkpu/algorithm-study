@@ -4,7 +4,7 @@ def dfs(grid, i, j):
             grid[i][j] != '1':
         return
 
-    grid[i][j] = '0'
+    grid[i][j] = 0
 
     dfs(grid, i+1, j)
     dfs(grid, i-1, j)
